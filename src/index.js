@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Card } from './Components/Card';
+import { AlertComponent } from './Components/AlertComponent';
+import HeaderHome from './Components/HeaderHome';
+import HomeLayout from './HomeLayout/HomeLayout';
+import Databinding from './DataBinding/Databinding';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<div className='abc'> abc </div>
+<div className="abc"> 
+<HomeLayout/>
+<Databinding />
+</div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
