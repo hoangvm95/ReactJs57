@@ -12,7 +12,7 @@ export default class Databinding extends Component {
         return <div>
             {kq} - {this.prod.name}
         </div>
-        //Có thể return về String, numbể, null, boolean hoặc jsx (Không thể binding object)
+        //Có thể return về String, number, null, boolean hoặc jsx (Không thể binding object)
     }
 
     render() {
