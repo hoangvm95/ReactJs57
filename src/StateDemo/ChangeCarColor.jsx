@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class ChangeCarColor extends Component {
     state={
-        img:'./img/CarBasic/products/black-car.jpg'
+        imgCar:'./img/CarBasic/products/black-car.jpg'
     }
     changeColor = (color) =>{
         this.setState({
@@ -15,7 +15,7 @@ export default class ChangeCarColor extends Component {
         <h3> Change Color</h3>
         <div className='row'>
             <div className='col-6'>
-                <img className='w-100' src={this.state.img} alt="..." />
+                <img className='w-100' src={this.state.imgCar} alt="..." />
             </div>
             <div className='col-6'>
                 <button className='btn btn-danger' onClick={()=>{
