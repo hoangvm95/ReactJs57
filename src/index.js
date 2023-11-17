@@ -16,6 +16,7 @@ import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProps from './Props/DemoProps/DemoProps';
 import EXRenderProductList from './Props/EXRenderProductList/EXRenderProductList';
 import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet';
+import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 // import scss ở index (Vì import ở bất kì file nào vãn build ra html.index)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,7 +31,8 @@ root.render(
 {/* <RenderWithMap/> */}
 {/* <DemoProps/> */}
 {/* <EXRenderProductList/> */}
-<BaiTapXemChiTiet/>
+{/* <BaiTapXemChiTiet/> */}
+<BaiTapGioHang/>
 </div>
 ); 
 
