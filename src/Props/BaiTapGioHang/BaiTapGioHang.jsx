@@ -179,9 +179,10 @@ export default class BaiTapGioHang extends Component {
             if (spClick.soLuong < 1) {
                 if (window.confirm ('Bạn có muốn xoá sản phẩm này không')) {
                     this.xoaGioHang(idClick)
+                    
                     return;
                 } else {
-                    
+                    spClick.soLuong +=1
                 }
             }
         }
