@@ -1,38 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Card } from './Components/Card';
-import { AlertComponent } from './Components/AlertComponent';
-import HeaderHome from './Components/HeaderHome';
-import HomeLayout from './HomeLayout/HomeLayout';
-import Databinding from './DataBinding/Databinding';
 import './assets/scss/style.scss'
-import StyleComponent from './StyleComponent/StyleComponent';
-import Handlevent from './HandleEvent/Handlevent';
-import ChangeFontSize from './StateDemo/ChangeFontSize';
-import ChangeColor from './StateDemo/ChangeColor';
-import ChangeAvatar from './StateDemo/ChangeAvatar';
-import ChangeCarColor from './StateDemo/ChangeCarColor';
-import RenderWithMap from './RenderWithMap/RenderWithMap';
-import DemoProps from './Props/DemoProps/DemoProps';
-import EXRenderProductList from './Props/EXRenderProductList/EXRenderProductList';
-import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet';
+import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
+import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet'
+import ChangeColor from './StateDemo/ChangeColor';
+import Header from './Components/Header';
+import HomeTemplate from './Templates/HomeTemplate';
+import Login from './Pages/Login';
+import UserTemplate from './Templates/UserTemplate';
+import Register from './Pages/Register';
+import Admin from './Pages/Admin';
+import ReactForm from './Pages/ReactForm/ReactForm';
 // import scss ở index (Vì import ở bất kì file nào vãn build ra html.index)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<div className="abc"> 
-{/* <Handlevent/> */}
-{/* <ChangeFontSize/> */}
-{/* <ChangeColor/> */}
-{/* <ChangeAvatar/> */}
-{/* <ChangeCarColor/> */}
+    <div className="abc">
+        <BrowserRouter>
+            {/* <Header/> */}
+            <Routes>
+                <Route path='' element={<HomeTemplate />}>
+                    <Route index element={<div>Trang chủ</div>} />
+                    <Route path='gio-hang' element={<BaiTapGioHang />} />
+                    <Route path='detail' element={<BaiTapXemChiTiet />} />
+                    <Route path='change-color' element={<ChangeColor />} />
+                    <Route path='login' element={<Login/>} />
+                    <Route path='react-form' element={<ReactForm/>} />
+                </Route>
+                
+                <Route path='user' element={<UserTemplate/>}>
+                    <Route index element={<Login/>}/>
+                    <Route path='login' element ={<Login/>} />
+                    <Route path='register' element={<Register/>}/>
+                    <Route path='admin' element={<Admin/>}/>
 
-{/* <RenderWithMap/> */}
-{/* <DemoProps/> */}
-{/* <EXRenderProductList/> */}
-{/* <BaiTapXemChiTiet/> */}
-<BaiTapGioHang/>
-</div>
-); 
+                    <Route path='*' element={<Navigate to=""/>} />
+                    
+                </Route>
+            </Routes>
+        </BrowserRouter>
+
+    </div>
+);
 
