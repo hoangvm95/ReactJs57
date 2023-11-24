@@ -12,6 +12,7 @@ import UserTemplate from './Templates/UserTemplate';
 import Register from './Pages/Register';
 import Admin from './Pages/Admin';
 import ReactForm from './Pages/ReactForm/ReactForm';
+import ReactLifecycle from './Pages/ReactLifecycle/ReactLifecycle.jsx';
 // import scss ở index (Vì import ở bất kì file nào vãn build ra html.index)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
                     <Route path='change-color' element={<ChangeColor />} />
                     <Route path='login' element={<Login/>} />
                     <Route path='react-form' element={<ReactForm/>} />
+                    <Route path='react-life-cycle' element={<ReactLifecycle/>} />
                 </Route>
                 
                 <Route path='user' element={<UserTemplate/>}>
@@ -40,7 +42,6 @@ root.render(
                 </Route>
             </Routes>
         </BrowserRouter>
-
     </div>
 );
 

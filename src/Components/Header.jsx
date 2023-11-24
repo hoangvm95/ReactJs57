@@ -19,6 +19,9 @@ export default class Header extends Component {
                         <li className="nav-item">
                             <NavLink className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} to="react-form">React Form</NavLink>
                         </li>
+                        <li className="nav-item">
+                                <NavLink className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'} to="/react-life-cycle"  style={({isActive}) => isActive ? {border:'1px solid orange'} : {} }>React Lifecycle</NavLink>
+                            </li>
                         <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</NavLink>
                             <div className="dropdown-menu" aria-labelledby="dropdownId">
@@ -26,6 +29,7 @@ export default class Header extends Component {
                                 <a className="dropdown-item" href="#">Action 2</a>
                             </div>
                         </li>
+                        
                     </ul>
                     <form className="d-flex my-2 my-lg-0">
                         <input className="form-control me-sm-2" type="text" placeholder="Search" />
